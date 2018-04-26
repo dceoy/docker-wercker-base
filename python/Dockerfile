@@ -1,4 +1,4 @@
-FROM python
+FROM python:latest
 
 RUN set -e \
       && ln -sf /bin/bash /bin/sh
@@ -10,6 +10,6 @@ RUN set -e \
       && apt-get clean
 
 RUN set -e \
-      && pip install -U pip
+      && pip install -U --no-cache-dir pip
 
 ENTRYPOINT ["/bin/bash", "-c"]

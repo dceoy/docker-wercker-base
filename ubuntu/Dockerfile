@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:latest
 
 RUN set -e \
       && ln -sf /bin/bash /bin/sh

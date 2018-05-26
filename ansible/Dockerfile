@@ -7,7 +7,7 @@ RUN set -e \
 
 RUN set -e \
       && apt-get -y update \
-      && apt-get -y upgrade \
+      && apt-get -y dist-upgrade \
       && apt-get -y install aptitude curl libffi-dev libssl-dev \
                             python-crypto python-dev python-pip ssh sudo \
       && apt-get -y autoremove \

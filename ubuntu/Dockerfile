@@ -8,8 +8,9 @@ RUN set -e \
 RUN set -e \
       && apt-get -y update \
       && apt-get -y dist-upgrade \
-      && apt-get -y install curl \
+      && apt-get -y install --no-install-recommends --no-install-suggests ca-certificates curl \
       && apt-get -y autoremove \
-      && apt-get clean
+      && apt-get clean \
+      && rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT ["/bin/bash", "-c"]
